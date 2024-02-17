@@ -1,5 +1,6 @@
 import { useState } from "react";
 import styled from "styled-components";
+import Badges from "./Badges";
 
 function UserModal() {
     const [state, setState] = useState("badges");
@@ -17,6 +18,7 @@ function UserModal() {
                 </div>
             </NAV>
 
+            {state == "badges" && <Badges/>}
             
 
         </DIV>

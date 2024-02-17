@@ -5,6 +5,7 @@ import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import Card from "./components/Card";
 import UserModal from "./components/UserModal";
+import { fetcher } from "../controller/controller";
 
 const headers = {
     "userid": "u-a2399489-9cd0-4c94-ad12-568379202b08",
@@ -30,19 +31,10 @@ function User() {
     })
 
 
-    const fetcher = (url) => {
-        dispatch({type: "REQUEST"})
-        return axios.get(url, {
-            headers: {
-                apikey: "k-6fe7e7dc-ac8f-44a1-8bbf-a1754ddf88be",
-                userid: "u-a2399489-9cd0-4c94-ad12-568379202b08",
-                token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJ1LWEyMzk5NDg5LTljZDAtNGM5NC1hZDEyLTU2ODM3OTIwMmIwOCIsImlhdCI6MTcwNzk4NzYyOSwiZXhwIjoxNzA4NTkyNDI5fQ.fESDqKunAqLUgHBCUsNYpGcNrTeVEty91HqGebX59Uc"
-            }
-        })
-    }
+    
 
     useEffect(() => {
-        fetcher("https://staging.questprotocol.xyz/api/users/u-a2399489-9cd0-4c94-ad12-568379202b08")
+        fetcher("https://staging.questprotocol.xyz/api/users/u-a2399489-9cd0-4c94-ad12-568379202b08", "REQUEST", dispatch)
         .then((res) => {
             console.log(res.data)
             dispatch({type: "USER_INFO_SUCCESS", payload: res.data.data});
@@ -51,7 +43,7 @@ function User() {
             dispatch({type:"ERROR"});
         })
 
-        fetcher("https://staging.questprotocol.xyz/api/entities/e-0000000000/users/u-a2399489-9cd0-4c94-ad12-568379202b08/xp")
+        fetcher("https://staging.questprotocol.xyz/api/entities/e-0000000000/users/u-a2399489-9cd0-4c94-ad12-568379202b08/xp", "REQUEST", dispatch)
         .then((res) => {
             dispatch({type: "USER_DATA_SUCCESS", payload: res.data});
         })
@@ -103,12 +95,16 @@ const Main = styled.div`
     width: 100%;
     height: calc(100vh - 14.5rem);
     text-align: center;
-    padding-top: 4rem;
+    padding-top: 4.7rem;
+
+    &>h2{
+        color: #333333;
+    }
 `
  const DP = styled.div`
     position: absolute;
     left: 50%;
-    transform: translate(-50%, -100%);
+    transform: translate(-50%, -115%);
     border-radius: 50%;
     border: 4px solid white;
     width: 7.5rem;
