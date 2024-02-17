@@ -27,7 +27,7 @@ function Badges() {
     },[])
     return ( 
         <DIV>
-            {badgeData?.map((el, i) => <div>
+            {badgeData?.map((el, i) => <div key={Math.random() + Date.now + i} >
                 <img src={el} alt="badge" />
             </div>)}
         </DIV>
@@ -37,18 +37,26 @@ function Badges() {
 export default Badges;
 
 const DIV = styled.div`
-margin-top: 1rem;
+    margin-top: 1rem;
     display: grid;
     grid-template-columns: 5.2rem 5.2rem 5.2rem;
     justify-content: space-around;
     row-gap: 0.7rem;
-    
+    height: calc(100vh - 31.8rem);
+    overflow-y: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 
     &>div{
         margin: 0 8px 0 8px;
+        cursor: pointer;
 
         &>img{
             width: 100%;
         }
+    }
+
+    &::-webkit-scrollbar{
+        display: none;
     }
 `
