@@ -1,67 +1,52 @@
-# Getting Started with Create React App
+# Quest Labs Mobile UI Assignment
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
 
-## Available Scripts
+This repository contains the code for a mobile screen UI designed using React for an assignment given by Quest Labs. The UI is built with a focus on accuracy and aesthetics, incorporating beautiful animations to enhance the user experience.
 
-In the project directory, you can run:
+## Technologies Used
 
-### `npm start`
+### 1. React
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+React is a JavaScript library for building user interfaces. Its component-based architecture makes it easy to manage and organize UI elements, promoting reusability and maintainability.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### 2. Redux
 
-### `npm test`
+Redux is a state management library that helps manage the state of the application in a predictable way. It is particularly useful for large and complex applications, providing a single source of truth for the entire application state.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 3. React-Redux
 
-### `npm run build`
+React-Redux is the official binding for React and Redux, enabling seamless integration of Redux with React components. It simplifies the process of connecting components to the Redux store and accessing the application state.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### 4. Axios
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Axios is a promise-based HTTP client for making asynchronous requests in JavaScript. It simplifies data fetching and handling HTTP responses, making it a reliable choice for API interactions in React applications.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### 5. Styled-Components
 
-### `npm run eject`
+Styled-Components is a CSS-in-JS library that allows you to write CSS directly in your JavaScript files. It offers a more maintainable and scoped styling approach for React components, enhancing modularity and reusability.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Benefits of Using These Technologies
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- **React**: Provides a modular and efficient way to build user interfaces, improving code organization and maintainability.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- **Redux**: Ensures a centralized and predictable state management system, making it easier to debug and maintain large-scale applications.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- **React-Redux**: Simplifies the integration of React with Redux, enhancing the overall development experience.
 
-## Learn More
+- **Axios**: Offers a simple and powerful way to handle HTTP requests, with features like interceptors and automatic JSON parsing.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- **Styled-Components**: Enhances component styling by encapsulating styles within the components, reducing the risk of style conflicts and improving maintainability.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Deployment
 
-### Code Splitting
+The application is deployed on Vercel and can be accessed [here](https://quest-assignment.vercel.app/).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Demo
 
-### Analyzing the Bundle Size
+Watch a demo of the mobile screen UI in action [here](https://drive.google.com/file/d/1xL0BIB0WmvOoYpNlzMAe2WFuU3JAmxHi/view?usp=sharing).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
+Feel free to explore the code and reach out if you have any questions or feedback!
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
