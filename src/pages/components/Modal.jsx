@@ -35,7 +35,11 @@ const OVERLAY = styled.div`
   left: 0;
   height: 100%;
   width: 100%;
-  background-color: rgb(0,0,0,0.3);
+  background-image: linear-gradient(
+    to bottom right,
+    rgb(0,0,0,0.6),
+    rgb(256,256,256,0.6)
+  );
   backdrop-filter: blur(3px);
   z-index: 2;
 `
@@ -70,7 +74,7 @@ const POPUP = styled.div`
   align-items: center;
   gap: 1rem;
   background-color: #fff;
-  border-radius: 1rem;
+  border-radius: 0.7rem;
   animation: ${popIn} 0.4s ease-out 0.1s;
   animation-fill-mode: backwards;
 

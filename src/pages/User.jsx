@@ -36,7 +36,6 @@ function User({setPopBadge, setPopShow}) {
     useEffect(() => {
         fetcher("https://staging.questprotocol.xyz/api/users/u-a2399489-9cd0-4c94-ad12-568379202b08", "REQUEST", dispatch)
         .then((res) => {
-            console.log(res.data)
             dispatch({type: "USER_INFO_SUCCESS", payload: res.data.data});
         })
         .catch((err) => {
@@ -53,7 +52,7 @@ function User({setPopBadge, setPopShow}) {
 
     }, [])
 
-    console.log(imageUrl, name)
+    
     return ( 
         <DIV>
             <Header text={"Profile"}/>
@@ -96,6 +95,7 @@ const Main = styled.div`
     height: calc(100vh - 14.5rem);
     text-align: center;
     padding-top: 4.7rem;
+    border-radius: 1rem 1rem 0 0;
 
     &>h2{
         color: #333333;

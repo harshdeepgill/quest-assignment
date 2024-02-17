@@ -22,6 +22,7 @@ const DIV = styled.div`
     justify-content: space-around;
     padding: 5px 0;
     margin-top: 1rem;
+    border-radius: 0.5rem;
 
     &>p:nth-child(1){
         font-size: 1.3rem;
