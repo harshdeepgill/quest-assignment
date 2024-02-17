@@ -2,7 +2,7 @@ import { useState } from "react";
 import styled from "styled-components";
 import Badges from "./Badges";
 
-function UserModal() {
+function UserModal({setPopBadge, setPopShow}) {
     const [state, setState] = useState("badges");
     return ( 
         <DIV>
@@ -18,7 +18,7 @@ function UserModal() {
                 </div>
             </NAV>
 
-            {state == "badges" && <Badges/>}
+            {state == "badges" && <Badges setPopShow={setPopShow} setPopBadge={setPopBadge}/>}
             
 
         </DIV>

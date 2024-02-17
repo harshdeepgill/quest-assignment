@@ -14,7 +14,7 @@ const headers = {
     "entityId": "e-0000000000"
   }
 
-function User() {
+function User({setPopBadge, setPopShow}) {
 
     const dispatch = useDispatch();
     
@@ -72,7 +72,7 @@ function User() {
                     <Card title={"Level"} val={level}/>
                 </CARDDIV>
                 
-                <UserModal/>
+                <UserModal setPopShow={setPopShow} setPopBadge={setPopBadge}/>
             </Main>
 
 

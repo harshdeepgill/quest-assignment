@@ -1,10 +1,13 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import styled from "styled-components";
 import { fetcher } from "../../controller/controller";
 import { useDispatch, useSelector } from "react-redux";
+import Modal from "./Modal";
 
-function Badges() {
+function Badges({setPopBadge, setPopShow}) {
     const dispatch = useDispatch();
+
+
 
     const {isLoadingData, isErrorData, badgeData} = useSelector((store) => {
         return {
@@ -25,11 +28,18 @@ function Badges() {
             dispatch({type: "SUCCESS_DATA", payload: arr})
         })
     },[])
+
+    const popFunc = (imageUrl) => {
+        setPopBadge(imageUrl);
+        setPopShow(true);
+    }
     return ( 
         <DIV>
-            {badgeData?.map((el, i) => <div key={Math.random() + Date.now + i} >
+            {badgeData?.map((el, i) => <div key={Math.random() + Date.now + i} onClick={() => {popFunc(el)}} >
                 <img src={el} alt="badge" />
             </div>)}
+
+            
         </DIV>
      );
 }
